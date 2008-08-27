@@ -15,7 +15,8 @@ makeSearchCommand({
     var params = { LEMA: searchTerm, ORIGEN: "RAE", TIPO_BUS: "1" };
 
     jQuery.get( url, params, function(data) {
-      var numToDisplay = 3;
+	  CmdUtils.setSelection( data );
+      /**var numToDisplay = 3;
       var results = jQuery(data).find("item").slice( 0, numToDisplay );
 
       pblock.innerHTML = "";
@@ -30,7 +31,7 @@ makeSearchCommand({
           description: e.find("description").text(),
         }
         pblock.innerHTML += CmdUtils.renderTemplate(templ, tdata);
-      });
+      });*/
     }, "xml");
   },
 });
