@@ -35,19 +35,3 @@ makeSearchCommand({
     }, "xml");
   },
 });
-
-makeSearchCommand({
-  name: "RAE",
-  url: "http://buscon.rae.es/draeI/SrvltConsulta?TIPO_BUS=3&LEMA={QUERY}",
-  description: "Searches the RAE dictionary for the term.",
-  preview: function(pblock, directObject) {
-    var searchTerm = directObject.text;
-    var pTemplate = "Searches the RAE dictionary for <b>${query}</b>";
-    var pData = {query: searchTerm};
-    pblock.innerHTML = CmdUtils.renderTemplate(pTemplate, pData);
-
-    var url = "http://buscon.rae.es/draeI/SrvltConsulta";
-    var params = { TIPO_BUS: "3", LEMA: searchTerm };
-
-  }
-});
