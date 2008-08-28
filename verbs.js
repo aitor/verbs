@@ -4,7 +4,7 @@ makeSearchCommand({
   author: {name: "Aitor García", email: "aitor@linkingpaths.com"},
   url: "http://buscon.rae.es/draeI/SrvltGUIBusUsual?TIPO_BUS=3&LEMA={QUERY}",
   icon: "http://rae.es/favicon.ico",
-  description: "Searches the RAE dictionary for the term.",
+  description: "Busca la definición de una palabra en el diccionario oficial de la R.A.E.",
   help: "Este comando permite buscar la definición de una palabra en el diccionario oficial de la R.A.E. Por ejemplo, puedes probar &quot;explica dipsomanía&quot;. Por defecto el texto seleccionado se utiliza como termino de busqueda."
   preview: function(pblock, directObject) {
     var searchTerm = directObject.text;
